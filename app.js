@@ -39,14 +39,14 @@ server.get("/", (req, res) => {
 });
 
 var connector = new builder.ChatConnector({
-    appId : "f0807a72-4ed2-4e51-bab8-4a99015bac10",
-    appPassword : "HpMeHu3NZV9M]6{+"
+    appId : "186d7c15-b1b0-4dcb-adcf-73838a2ba87b",
+    appPassword : "CV48CX;[[r#MTl34"
 });
 
 var bot = new builder.UniversalBot(connector, { localizerSettings : { botLocalePath : path.join(__dirname, "./locale"), defaultLocale : "en" } });
 server.post('/api/messages', connector.listen());
 
-var ba = new botauth.BotAuthenticator(server, bot, { baseUrl: "https://localhost:3998/api/messages", secret : "TESTAUTH" });
+var ba = new botauth.BotAuthenticator(server, bot, { baseUrl: "https://dropbox-exm.azurewebsites.net", secret : "TESTAUTH" });
 
 ba.provider("dropbox", (options) => {
     return new DropboxOAuth2Strategy({
