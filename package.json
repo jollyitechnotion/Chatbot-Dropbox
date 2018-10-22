@@ -1,33 +1,30 @@
 {
-  "name": "botauth-dropbox",
+  "name": "formbot",
   "version": "1.0.0",
-  "description": "botauth sample for connecting to dropbox",
-  "main": "app.js",
-  "dependencies": {
-    "botauth": "^0.2.10",
-    "botbuilder": "^3.5.0-rc5",
-    "dropbox": "^2.4.0",
-    "envx": "^1.0.0",
-    "passport-dropbox-oauth2": "^1.1.0",
-    "restify": "^4.2.0"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mattdot/botauth-samples.git"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "botauth": "^0.2.12",
+    "botbuilder": "^3.13.1",
+    "botbuilder-azure": "^3.0.4",
+    "dropbox": "^4.0.9",
+    "envx": "^1.0.1",
+    "fs": "0.0.1-security",
+    "nodemon": "^1.18.4",
+    "passport-dropbox-oauth2": "^1.1.0",
+    "request-promise": "^4.2.2",
+    "restify": "^5.0.0",
+    "restify-clients": "^2.6.2"
   },
-  "keywords": [
-    "botframework",
-    "oauth",
-    "dropbox"
-  ],
-  "author": "Matt Dotson <mdotson@microsoft.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mattdot/botauth-samples/issues"
-  },
-  "homepage": "https://github.com/mattdot/botauth-samples#readme"
+  "devDependencies": {
+    "request": "^2.88.0",
+    "zip-folder": "^1.0.0"
+  }
 }

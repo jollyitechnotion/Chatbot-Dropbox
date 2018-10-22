@@ -3,6 +3,7 @@
 const url = require("url");
 const https = require("https");
 const restify = require("restify");
+const restify_clients = require("restify-clients");
 const envx = require("envx");
 const Dropbox = require("dropbox");
 
@@ -15,7 +16,7 @@ const MICROSOFT_APP_PASSWORD = "HpMeHu3NZV9M]6{+";
  * 
  */
 function getSourceToken(callback) {
-    restify.createStringClient({
+    restify_clients.createStringClient({
         url : "https://login.microsoftonline.com"
     }).post({ 
         path : "/common/oauth2/v2.0/token" 
@@ -31,6 +32,7 @@ function getSourceToken(callback) {
 }
 
 function getSourceMeta(options, callback) {
+    console.log(options);
     let u = url.parse(options.sourceUrl.replace("/views/original", ""));
     let token = options.sourceToken;
 
